@@ -28,3 +28,24 @@
 //     perform assertion (verify the result)
 //     report test result, alert developer if failed or passed
 
+
+
+// junit5 -> it is not junit4 + new features
+
+// junit5 platform - environment to run test cases, we will not deirectly interact with this platform we will be using junit5 jupiter api to write test cases and junit5 vintage api to run junit4 test cases.
+//     junit-platform-commons
+//     junit-platform-engine
+//     junit-platform-launcher
+//     junit-platform-runner
+//     junit-platform-suite-api
+//     junit-platform-suite-engine
+
+// jupiter api interacts with platform and that ecosystem.
+
+// junit5 does not provide backward compatibility for junit4 test cases. so junit5 vintage api is provided to run junit4 test cases. here for junit 4 test cases vintage api interacts with that platfrom ecosystem.
+
+// extension -> enhance the testing capabitlity of junit 5. without extension junit5 is not complete. extension is a way to add new functionality to junit5. it is a way to extend the functionality of junit5. it is a way to add new features.
+// if dont want to use jupiter we can interact with platform through this extension as well.
+
+
+
