@@ -18,3 +18,13 @@
 
 // that same test can be used further as well to test again and again to check if the unit is still working fine after any modification or enhancement in the code. because maybe there is a chance that changing or introducing some new code may break the existing code unit. so we check that again by the previously written test cases to check if the unit is still working fine or not. that is called regression testing. so unit testing is done by the developer and regression testing is done by the test engineer.
 
+
+
+// unit Testing
+//     prepare (setup a test environment, write test methods, etc)
+//     provide testing input
+//     run the test
+//     provide expected output
+//     perform assertion (verify the result)
+//     report test result, alert developer if failed or passed
+
