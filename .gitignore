@@ -1,0 +1,48 @@
+# ==========================================
+# Build Artifacts (Maven & Gradle)
+# ==========================================
+# Blocks the 'target' directory across all nested/hierarchical folders
+**/target/
+**/build/
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+
+# ==========================================
+# IDE & Editor Specific Files
+# ==========================================
+# Eclipse
+**/.metadata/
+**/tmp/
+**/.tmp/
+**/.classpath
+**/.project
+**/.settings/
+
+# IntelliJ IDEA
+**/.idea/
+**/*.iml
+**/*.iws
+**/*.ipr
+out/
+**/out/
+
+# VS Code
+**/.vscode/
+
+# ==========================================
+# OS & System Generated Files
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Crash Logs & Temporary Files
+# ==========================================
+*.log
+*.coredump
+hs_err_pid*
