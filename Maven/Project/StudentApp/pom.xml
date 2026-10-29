@@ -13,6 +13,7 @@
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.12.2</junit.version>
+        <!-- <app.environment>development</app.environment> -->
     </properties>
 
     <dependencies>
@@ -33,6 +34,13 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
         <plugins>
             <!-- Compile Java using the configured release -->
             <plugin>
@@ -74,5 +82,43 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <app.environment>development</app.environment>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>testing</id>
+            <properties>
+                <app.environment>testing</app.environment>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod</id>
+            <properties>
+                <app.environment>production</app.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>ci-build</id>
+            <activation>
+                <property>
+                    <name>ci</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <properties>
+                <app.environment>testing</app.environment>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
